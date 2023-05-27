@@ -1,0 +1,25 @@
+In Verilog, blocking and non-blocking statements are used to assign values to variables or signals within procedural blocks. The difference between these two types lies in how they execute and update the assigned values.
+Blocking Statements:
+A blocking statement uses the "=" assignment operator to assign a value to a variable or signal.
+The execution of blocking statements occurs sequentially, meaning the subsequent statements wait for the current statement to complete before proceeding.
+Blocking assignments are evaluated and updated immediately in the order they appear within the block.
+Here's an example of blocking statements:
+always @(posedge clk) begin
+  a = b; // Blocking assignment
+  c = a + 1; // Blocking assignment
+end
+In this example, the assignment of "a = b" is executed first, and the value of "b" is immediately assigned to "a".
+Then, the assignment of "c = a + 1" is executed, using the updated value of "a".
+You would typically use blocking statements when you want to model sequential behavior or when the order of assignments is significant. 
+They are useful in situations where you want to ensure that certain operations are completed before moving on to the next statement.
+Non-blocking Statements:
+A non-blocking statement uses the "<=" assignment operator to assign a value to a variable or signal.
+Non-blocking assignments are evaluated and scheduled to be updated in a future simulation time step, allowing concurrent execution of multiple assignments within the block.
+Non-blocking assignments do not affect the execution flow of subsequent statements within the block.
+Here's an example of non-blocking statements:
+always @(posedge clk) begin
+  a <= b; // Non-blocking assignment
+  c <= a + 1; // Non-blocking assignment
+end
+In this example, both assignments "a <= b" and "c <= a + 1" are evaluated at the same time and scheduled to be updated at the next positive edge of the clock.
+Non-blocking statements are typically used to model concurrent behavior, such as describing the behavior of flip-flops or registers. They are particularly useful in scenarios where multiple assignments need to occur simultaneously without affecting the order of execution.
