@@ -1,0 +1,13 @@
+Sequential logic circuits are electronic circuits that have memory or the ability to store and remember past states. 
+These circuits use feedback to remember previous inputs and generate outputs based on both the current inputs and the stored information.
+The basic building block of sequential logic circuits is a flip-flop, which is a bistable circuit capable of storing one bit of information. 
+Flip-flops can be combined to create more complex circuits such as registers, counters, and memory units.
+Let's take the example of a simple sequential logic circuit known as a "D flip-flop" to understand how it works. 
+The D flip-flop is a widely used sequential circuit element.
+A D flip-flop has two inputs: a data input (D) and a clock input (CLK), and two outputs: the stored value (Q) and its complement (Q'). 
+The D input represents the value that we want to store or "flip" into the flip-flop, and the CLK input controls when the flipping operation occurs.
+Here's how the D flip-flop operates:
+When the CLK input is in the "low" state (0), the flip-flop is in the hold state, meaning it maintains its previous state.
+When the CLK input transitions from low to high (rising edge or positive edge), the flip-flop captures the current value of the D input and stores it.
+Once the CLK input transitions back to low, the stored value remains unchanged until the next rising edge of the CLK input.
+This behavior allows the D flip-flop to remember the last value applied to the D input until a clock pulse occurs, at which point it updates its stored value
