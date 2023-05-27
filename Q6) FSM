@@ -1,0 +1,41 @@
+A Finite State Machine (FSM) is a mathematical model used to represent and control the behavior of a system. 
+It consists of a finite number of states, transitions between those states based on inputs, and actions associated with each state and transition. 
+FSMs are widely used in digital systems design and sequential logic circuits.
+There are different types of FSMs based on their characteristics and behavior. Let's explore the three main types:
+1) Mealy Machine:
+
+In a Mealy machine, the outputs are dependent on both the current state and the inputs.
+The output is produced as a function of the current state and the inputs during a transition.
+The outputs are associated with transitions rather than with states.
+Mealy machines are more efficient in terms of the number of states and transitions compared to other types.
+However, the output changes during a transition, which can lead to glitches or timing issues in certain cases.
+
+2)Moore Machine:
+
+In a Moore machine, the outputs are solely dependent on the current state.
+The output is associated with the states and remains constant throughout a state.
+The output changes only when a state transition occurs.
+Moore machines are simpler to design and analyze as the output is stable during a state.
+However, they may require more states compared to Mealy machines to achieve the same functionality.
+
+3)Modified Moore Machine:
+
+A Modified Moore machine is a variation of the Moore machine where some of the outputs are dependent on the current state and others on the inputs.
+The output is associated with the states and remains constant during a state, similar to the Moore machine.
+However, some outputs can change during a state transition based on the inputs.
+Modified Moore machines offer a balance between Mealy and Moore machines, combining the stability of Moore outputs with the flexibility of Mealy outputs during transitions.
+
+The choice of the FSM type depends on the specific design requirements and constraints. 
+Generally, Mealy machines are preferred in most cases due to their efficiency in terms of the number of states and transitions. 
+Mealy machines often have fewer states compared to Moore machines for the same functionality, which results in reduced hardware complexity and improved performance.
+
+However, Moore machines or modified Moore machines may be preferred in certain scenarios where the stability of outputs during a state is critical or where explicit control over the timing and glitches is required. 
+Moore machines are simpler to analyze and design, making them suitable for applications where simplicity and predictability are prioritized over hardware optimization.
+
+Ultimately, the selection of the FSM type should be based on a thorough understanding of the system requirements, design goals, and trade-offs between complexity, performance, and stability of outputs.
+
+
+
+
+
+
