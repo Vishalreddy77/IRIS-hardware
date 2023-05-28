@@ -1,0 +1,45 @@
+To design a combinational circuit that produces a 2-bit output based on the conditions d, we can follow these steps:
+
+1. Determine the conditions for prime numbers and divisibility by 6.
+   - A prime number is a number that is only divisible by 1 and itself.
+   - Divisibility by 6 means the number is divisible by both 2 and 3.
+
+2. Create a truth table with inputs X[3:0] and outputs Y[1:0] based on the conditions.
+   - In this case, there are 16 possible 4-bit inputs, so the truth table will have 16 rows.
+
+Here is the truth table:
+
+```
+| X[3] | X[2] | X[1] | X[0] | Y[1] | Y[0] |
+|------|------|------|------|------|------|
+|  0   |  0   |  0   |  0   |  0   |  0   |
+|  0   |  0   |  0   |  1   |  0   |  0   |
+|  0   |  0   |  1   |  0   |  0   |  0   |
+|  0   |  0   |  1   |  1   |  0   |  0   |
+|  0   |  1   |  0   |  0   |  0   |  0   |
+|  0   |  1   |  0   |  1   |  0   |  0   |
+|  0   |  1   |  1   |  0   |  0   |  0   |
+|  0   |  1   |  1   |  1   |  0   |  0   |
+|  1   |  0   |  0   |  0   |  0   |  0   |
+|  1   |  0   |  0   |  1   |  0   |  0   |
+|  1   |  0   |  1   |  0   |  0   |  0   |
+|  1   |  0   |  1   |  1   |  0   |  0   |
+|  1   |  1   |  0   |  0   |  0   |  0   |
+|  1   |  1   |  0   |  1   |  0   |  0   |
+|  1   |  1   |  1   |  0   |  0   |  0   |
+|  1   |  1   |  1   |  1   |  0   |  0   |
+```
+
+Based on the truth table, we can now design the circuit using basic logic gates.
+
+The circuit diagram for the given conditions is as follows:
+
+```
+          +-------+
+X[3] ---->|       |
+          | Prime |
+X[2] ---->| Check |
+          |       |
+X[1] ---->|       |----> Y[1]
+          +-------+
+X[0] ---->|       |
